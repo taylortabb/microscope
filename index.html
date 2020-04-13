@@ -1,129 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('clock').innerHTML =
-  h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 500);
-}
-function checkTime(i) {
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('clock').innerHTML =
+      h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
 </script>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
 
   <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Your page title here :)</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
   <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-</head>
-<body>
-<body onload="startTime()">
+  </head>
+  <body>
+    <body onload="startTime()">
 
   <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="microscope"></div>
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="microscope"></div>
 <!-- <footer class="footer">
     <span class="highlight">40x</span> <span class="highlight">Live: <span id="clock"></span> </span>
   </footer> -->
 
+<div class="w3-animate-opacity">
   <footer class="footer">
     <span class="highlight">40x</span>
     <br><br>
-    <span class="highlight">• Live <span id="clock"></span></span>
+    <span class="highlight"><span class="w3-animate-fading">•</span> Live <span id="clock"></span></span>
     <br><br>
     <span class="highlight">Saccharomyces Cerevisiae (Baker's Yeast)</span>
   </footer>
-
+</div>
   <footer class="header">
-
-<span class="menu" style="cursor:pointer" onclick="openNav()">&#9776;</span>
-
+<div class="w3-animate-opacity">
+    <span class="menu" style="cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
   </footer>
 
 
-    <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-  <button class="collapsible">About</button>
-<div class="content">
-  <h5>You've tuned into <i>Microscopy, Live!</i></h5><h6>This little corner of the web is all micrscroscopy, all the time. Broadcasting daily from Pittsburgh, Pennsylvania, Microscopy, Live! Features all your favorite microrganisms— from household yeast to lactobacillus acidophilus. Check out the Schedule for what's being viewed when.</h6>
-</div>
+    <button class="collapsible">About</button>
+    <div class="content">
+      <h5>You've tuned into <i>Microscopy, Live!</i></h5><h6>This little corner of the web is all micrscroscopy, all the time. Broadcasting daily from Pittsburgh, Pennsylvania, Microscopy, Live! Features all your favorite microrganisms— from household yeast to lactobacillus acidophilus. Check out the Schedule for what's being viewed when.</h6>
+    </div>
 
-  <button class="collapsible">Schedule</button>
-<div class="content">
-  <h6> Monday <br> Yard Leaf Organelles! </h5> 
-  <h6> Tuesday <br> River Water. See what lives in the river!</h5> 
-  <h6> Wednesday <br> Lactobacillus— The culture in yogurt. </h5> 
-  <h6> Thursday <br>Bakers Yeast. Lot's of movement in this one. </h5> 
-  <h6> Friday <br> Onion Cell Organelles! </h5> 
-  <h6> Saturday <br> It's SCOBY Saturday. Tune in for The Kombucha Cam! </h5>
-  <h6> Sunday <br> Mystery! Tune In To Find Out! </h5> 
-</div>
+    <button class="collapsible">Schedule</button>
+      <div class="content">
+        <h6> Monday <br> Yard Leaf Organelles! </h5> 
+        <h6> Tuesday <br> River Water. See what lives in the river!</h5> 
+        <h6> Wednesday <br> Lactobacillus— The culture in yogurt. </h5> 
+        <h6> Thursday <br>Bakers Yeast. Lot's of movement in this one. </h5> 
+        <h6> Friday <br> Onion Cell Organelles! </h5> 
+        <h6> Saturday <br> It's SCOBY Saturday. Tune in for The Kombucha Cam! </h5>
+        <h6> Sunday <br> Mystery! Tune In To Find Out! </h5> 
+      </div>
 
-  <button class="collapsible">Requests</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
+     <button class="collapsible">Requests</button>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
 
-</div>
+      <button class="collapsible">Contact</button>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+
+  </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+  </script>
 </body>
 </html>
