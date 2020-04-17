@@ -59,21 +59,22 @@
     <span class="highlight">40x</span> <span class="highlight">Live: <span id="clock"></span> </span>
   </footer> -->
 
-<div class="w3-animate-opacity">
   <footer class="footer">
-    <span class="highlight">Baker's Yeast <span class="w3-animate-fading">•</span> Live <span id="clock"></span></span>
+    <span class="highlight">Baker's Yeast </span> <br> <br> <span class="highlight">Live <span id="clock"></span></span>
   </footer>
 </div>
-  <footer class="header">
-<div class="w3-animate-opacity">
-    <span class="menu" style="cursor:pointer" onclick="openNav()">&#9776;</span>
 
+  <footer class="header menu">
+    <span class="highlight" id="menu-button" style="cursor:pointer" onclick="openNav()">&#9776;</span>
   </footer>
 
+ <div id="chat" class="chat">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeChat()">&times;</a>
+      <iframe src="https://minnit.chat/MicroscopyChat?embed&transparent&nickname=" style="border:none;width:100%;height:100%;" allowTransparency="true"></iframe>
+</div>
 
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
     <button class="collapsible">About</button>
     <div class="content">
       <h5>You've tuned into <i>Microscopy, Live!</i></h5><h6>This little corner of the web is all micrscroscopy, all the time. Broadcasting daily from Pittsburgh, Pennsylvania, Microscopy, Live! Features all your favorite microrganisms— from household yeast to lactobacillus acidophilus. Check out the Schedule for what's being viewed when.</h6>
@@ -99,9 +100,7 @@
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
-
-      <iframe src="https://minnit.chat/MicroscopyChat?embed&transparent&nickname=" style="border:none;width:100%;height:500px;" allowTransparency="true"></iframe>
-
+      <button class="collapsible"><span id="chat-button" style="cursor:pointer" onclick="openChat()">Chat</span></button>
 
   </div>
 
@@ -111,12 +110,32 @@
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("menu-button").style.display = "none";
+      document.getElementById("chat-button").style.display = "inline";
     }
 
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("menu-button").style.display = "inline";
+      document.getElementById("chat-button").style.display = "inline";
     }
   </script>
+
+   <script>
+    function openChat() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("chat").style.width = "250px";
+      document.getElementById("menu-button").style.display = "none";
+      document.getElementById("chat-button").style.display = "none";
+    }
+
+    function closeChat() {
+      document.getElementById("chat").style.width = "0";
+      document.getElementById("menu-button").style.display = "inline";
+      document.getElementById("chat-button").style.display = "inline";
+    }
+  </script>
+
   <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
